@@ -1,6 +1,6 @@
 package com.devops.Bookstore;
 
-
+//Integration Test Cases
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
