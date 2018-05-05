@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry excluding="**" kind="src" output="target/test-classes" path="src/integration-test/java">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="E:/Program Files/apache-tomcat-8.5.24/lib/servlet-api.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/Program Files/chromedriver_win32/chromedriver.exe"/>
+	<classpathentry exported="true" kind="lib" path="E:/sarhuhu/Downloads/mongo-java-driver-3.6.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/sarhuhu/Downloads/selenium-java-3.8.1/client-combined-3.8.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/sarhuhu/Downloads/selenium-java-3.8.1/client-combined-3.8.1-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/sarhuhu/Downloads/selenium-java-3.8.1/libs/byte-buddy-1.7.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/sarhuhu/Downloads/selenium-java-3.8.1/libs/commons-codec-1.10.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/sarhuhu/Downloads/selenium-java-3.8.1/libs/commons-exec-1.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/sarhuhu/Downloads/selenium-java-3.8.1/libs/commons-logging-1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/sarhuhu/Downloads/selenium-java-3.8.1/libs/gson-2.8.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/sarhuhu/Downloads/selenium-java-3.8.1/libs/guava-23.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/sarhuhu/Downloads/selenium-java-3.8.1/libs/httpclient-4.5.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/sarhuhu/Downloads/selenium-java-3.8.1/libs/httpcore-4.4.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="E:/sarhuhu/Downloads/geckodriver-v0.19.1-win64/geckodriver.exe"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>

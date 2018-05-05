@@ -1,0 +1,4 @@
+com\devops\Bookstore\ProcessRegistration.class
+com\devops\Bookstore\mongoclass.class
+com\devops\Bookstore\ProcessLogin.class
+com\devops\Bookstore\ResetPassword.class

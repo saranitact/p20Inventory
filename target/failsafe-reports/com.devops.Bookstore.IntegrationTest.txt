@@ -1,0 +1,26 @@
+-------------------------------------------------------------------------------
+Test set: com.devops.Bookstore.IntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 10.232 sec <<< FAILURE! - in com.devops.Bookstore.IntegrationTest
+shouldLogin(com.devops.Bookstore.IntegrationTest)  Time elapsed: 7.698 sec  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+java.net.SocketException: Connection reset
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'SARAN-HP', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: driver.version: RemoteWebDriver
+	at com.devops.Bookstore.IntegrationTest.shouldLogin(IntegrationTest.java:51)
+Caused by: java.net.SocketException: Connection reset
+	at com.devops.Bookstore.IntegrationTest.shouldLogin(IntegrationTest.java:51)
+
+com.devops.Bookstore.IntegrationTest  Time elapsed: 10.23 sec  <<< ERROR!
+org.openqa.selenium.WebDriverException: 
+org.apache.http.conn.HttpHostConnectException: Connect to localhost:21009 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+Build info: version: '3.8.1', revision: '6e95a6684b', time: '2017-12-01T18:33:54.468Z'
+System info: host: 'SARAN-HP', ip: '192.168.56.1', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_131'
+Driver info: driver.version: RemoteWebDriver
+	at com.devops.Bookstore.IntegrationTest.cleanUp(IntegrationTest.java:45)
+Caused by: org.apache.http.conn.HttpHostConnectException: Connect to localhost:21009 [localhost/127.0.0.1, localhost/0:0:0:0:0:0:0:1] failed: Connection refused: connect
+	at com.devops.Bookstore.IntegrationTest.cleanUp(IntegrationTest.java:45)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at com.devops.Bookstore.IntegrationTest.cleanUp(IntegrationTest.java:45)
+

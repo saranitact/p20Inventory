@@ -1,0 +1,2 @@
+#!/bin/sh 
+curl -X POST http://localhost:4080/job/DevOpsBookstore/build
