@@ -18,7 +18,7 @@ public class ProcessLogin
   extends HttpServlet
 {
   private static final long serialVersionUID = 1L;
-  
+  //process Login info
   public ProcessLogin() {}
   
   protected void doGet(HttpServletRequest request, HttpServletResponse response)

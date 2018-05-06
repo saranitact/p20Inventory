@@ -16,8 +16,7 @@ public class UnitTest
 	 public void  testLoginSuccess(){
     	//assertEquals(true, new ProcessLogin().Login("saran@a.com",  "saran@a.com"));
 		 //positive test case
-		 
-		 assertEquals(true, new ProcessLogin().Login("tinks_2000@yahoo.com",  "pass"));
+		 		 assertEquals(true, new ProcessLogin().Login("tinks_2000@yahoo.com",  "pass"));
 	 }
 	 @Test
 	   public void  testLoginFailure(){
