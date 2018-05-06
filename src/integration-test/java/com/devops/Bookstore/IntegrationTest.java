@@ -28,6 +28,7 @@ public class IntegrationTest {
 	@BeforeClass
 	public static void setup() {
 		System.setProperty("webdriver.chrome.driver", "E:\\Users\\SARAN\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		//Firefox webdriver
 		//System.setProperty("webdriver.gecko.driver", "E:\\sarhuhu\\Downloads\\geckodriver-v0.19.1-win64\\geckodriver.exe");
 
 		
