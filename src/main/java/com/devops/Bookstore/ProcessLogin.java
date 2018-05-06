@@ -37,6 +37,7 @@ public class ProcessLogin
     
     //Create DB
     db = mongo.getDB("BookstoreDB");
+    //Create Collection
     table = db.getCollection("UserColl");
     
     String responsePage = "index.jsp";
