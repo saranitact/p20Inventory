@@ -35,6 +35,7 @@ public class ProcessLogin
     DBCollection table = null;
     mongo = new Mongo("localhost", 27017);
     
+    //Create DB
     db = mongo.getDB("BookstoreDB");
     table = db.getCollection("UserColl");
     
