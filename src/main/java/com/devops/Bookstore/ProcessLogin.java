@@ -44,7 +44,7 @@ public class ProcessLogin
     RequestDispatcher rd = request.getRequestDispatcher(responsePage);
     
     request.getRequestDispatcher("displayData.jsp");
-    
+    //Get data
     String email = request.getParameter("email");
     String pwd = request.getParameter("password");
     
