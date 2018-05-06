@@ -48,6 +48,7 @@ public class ProcessLogin
     String email = request.getParameter("email");
     String pwd = request.getParameter("password");
     
+    //Load data
     BasicDBObject query = new BasicDBObject();
     query.put("email", email);
     query.put("password", pwd);
