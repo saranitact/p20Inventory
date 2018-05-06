@@ -15,11 +15,13 @@ public class UnitTest
 	 @Test
 	 public void  testLoginSuccess(){
     	//assertEquals(true, new ProcessLogin().Login("saran@a.com",  "saran@a.com"));
+		 //positive test case
 		 
 		 assertEquals(true, new ProcessLogin().Login("tinks_2000@yahoo.com",  "pass"));
 	 }
 	 @Test
 	   public void  testLoginFailure(){
+		 //negative test case
 	   	assertEquals(false, new ProcessLogin().Login("saran@a.com",  "saran"));
 	    }
 	
