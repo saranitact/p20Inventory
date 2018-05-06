@@ -64,6 +64,7 @@ public class ProcessLogin
     else
     {
       request.setAttribute("dfontcolor", "red");
+      //Error message
       request.setAttribute("dmessage", "Sorry Incorrect UserName or Password!");
       rd.include(request, response);
     }
