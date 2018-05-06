@@ -52,6 +52,7 @@ public class ProcessLogin
     BasicDBObject query = new BasicDBObject();
     query.put("email", email);
     query.put("password", pwd);
+    //Fetch data
     DBCursor cursor = table.find(query);
     if (cursor.count() > 0) {
     	//is successful goto success.jsp
