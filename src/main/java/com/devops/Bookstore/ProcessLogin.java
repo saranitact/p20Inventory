@@ -54,7 +54,7 @@ public class ProcessLogin
     query.put("password", pwd);
     //Fetch data
     DBCursor cursor = table.find(query);
-    //If found
+    //If record is found
     if (cursor.count() > 0) {
     	//is successful goto success.jsp
       responsePage = "success.jsp";
