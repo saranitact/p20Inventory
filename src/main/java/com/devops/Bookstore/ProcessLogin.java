@@ -77,6 +77,7 @@ public class ProcessLogin
 	    //Connect
 	    mongo = new Mongo("localhost", 27017);
 	    
+	    //set DB
 	    db = mongo.getDB("BookstoreDB");
 	    table = db.getCollection("UserColl");
 	    
