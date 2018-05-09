@@ -69,7 +69,7 @@ public class ProcessLogin
       rd.include(request, response);
     }
   }
-  
+  //Mongo DB
   public boolean Login(String strEmail, String strPwd){
 	  	Mongo mongo = null;
 	    DB db = null;
