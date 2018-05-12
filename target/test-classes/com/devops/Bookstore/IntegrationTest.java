@@ -1,6 +1,6 @@
 package com.devops.Bookstore;
 
-
+//Integration Test Cases
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -19,9 +19,6 @@ import java.util.concurrent.TimeUnit;
 import org.junit.experimental.categories.Category;
 import com.devops.Bookstore.IntegrationTest;
 
-
-
-
 @Category(IntegrationTest.class)
 public class IntegrationTest {
 
@@ -30,7 +27,9 @@ public class IntegrationTest {
 
 	@BeforeClass
 	public static void setup() {
+		//Chrome webdriver
 		System.setProperty("webdriver.chrome.driver", "E:\\Users\\SARAN\\Downloads\\chromedriver_win32\\chromedriver.exe");
+		//Firefox webdriver
 		//System.setProperty("webdriver.gecko.driver", "E:\\sarhuhu\\Downloads\\geckodriver-v0.19.1-win64\\geckodriver.exe");
 
 		
@@ -58,6 +57,4 @@ public class IntegrationTest {
 
 		}
 	
-		
-
 	}
