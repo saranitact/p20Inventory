@@ -49,7 +49,9 @@ public class IntegrationTest {
 		
 		driver.get("http://localhost:6080/Bookstore/");
 		//Thread.sleep(9000000);
-		try {Thread.sleep(80000);} catch (InterruptedException e) {}	
+		try {
+			//Thread.sleep(1000);
+		} catch (InterruptedException e) {}	
 		Boolean bool = false;
 
 		System.out.println(driver.getTitle());
