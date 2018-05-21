@@ -37,7 +37,7 @@ User Password:
 
 <tr>
 <td>
-<input type="submit" value="Login">
+<input type="submit" name="btnlogin" value="Login">
 </td>
 <td>
 <a href="ResetPassword.jsp">

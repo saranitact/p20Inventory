@@ -47,13 +47,19 @@ public class IntegrationTest {
 	@Test
 	public void shouldLogin() {
 		
-		driver.get("http://localhost:6080/Bookstore/");
+		driver.get("http://localhost:5080/Bookstore/");
 		//Thread.sleep(9000000);
-		try {Thread.sleep(1000);} catch (InterruptedException e) {}	
+		try {
+			Thread.sleep(80000);
+		} catch (InterruptedException e) {}	
 		Boolean bool = false;
-
+/*		driver.findElement(By.name("email")).sendKeys("a@b.com");
+		driver.findElement(By.name("password")).sendKeys("pass");
+		driver.findElement(By.name("btnlogin")).click();*/
+		
 		System.out.println(driver.getTitle());
-		Assert.assertTrue((driver.getTitle().equals("DevOps BookStore Login")));
+		Assert.assertTrue((driver.getTitle().equals("DevOps BookStore")));
+		
 
 		}
 	
