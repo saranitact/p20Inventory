@@ -52,7 +52,7 @@
   <build>
      <finalName>MyWebIntegration</finalName>
     <plugins>
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
 				<version>1.9.1</version>
@@ -85,22 +85,22 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>
-			<plugin>
+			</plugin> -->
+			<!-- <plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.18.1</version>
 			 	<configuration>
-				<!-- Below line was commented by me		-->
+				Below line was commented by me		
 				<excludedGroups>com.devops.Bookstore.IntegrationTest</excludedGroups>
-					<!-- Below testfailureignore and printsummary tags have been added by me 
+					Below testfailureignore and printsummary tags have been added by me 
         			<testFailureIgnore>true</testFailureIgnore>
-        			<printSummary>true</printSummary>	-->
+        			<printSummary>true</printSummary>	
 				</configuration>
 			
 			</plugin>
+ -->
 
-
-			<plugin>
+<!-- 		/*	<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-failsafe-plugin</artifactId>
 				<version>2.19.1</version>
@@ -108,7 +108,7 @@
 					<includes>
 						<include>**/*.java</include>
 					</includes>
-					<!-- below line has been commented by me  -->
+					below line has been commented by me 
 					 <groups>com.devops.Bookstore.IntegrationTest</groups>
 				</configuration>
 				<executions>
@@ -116,7 +116,7 @@
 						<goals>
 							<goal>integration-test</goal>
 							<goal>verify</goal>
-							<!--tomcat will not stop if you do not specify verify -->
+							tomcat will not stop if you do not specify verify
 						</goals>
 					</execution>
 				</executions>
@@ -151,7 +151,7 @@
 					</execution>
 				</executions>
 			</plugin>
- 
+ */ -->
 
 		</plugins>
 		<pluginManagement>
