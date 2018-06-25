@@ -4,10 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>DevOps Bookstore Login</title>
+<title>DevOps Inventory Login</title>
 </head>
 <body>
-<h1>Welcome to DevOps BookStore</h1>
+<table background="" bgcolor="yellowgreen" height="50" width="1200"> <tr><td>
+<h1>Sign In</h1>
+</td></tr></table>
 <br><br>
 
 <form action="ProcessLogin" method="post"> 
@@ -29,9 +31,11 @@ UserName:
 <tr>
 <td>
 User Password:
+<br><br>
 </td>
 <td>
 <input type="password" name="password" required>
+<br><br>
 </td>
 </tr>
 
@@ -39,24 +43,10 @@ User Password:
 <td>
 <input type="submit" name="btnlogin" value="Login">
 </td>
-<td>
-<a href="ResetPassword.jsp">
-   <input type="button" value="ResetPassword" />
-</a> 
-</td>
+
 </tr>
 </table>
-<!-- UserName: <input type="text" name="email" required>
-Please enter your registered email as username<br>  
-User Password: <input type="password" name="password" required><br>
-
-<input type="submit" value="Sign In">
-
-
-<a href="ResetPassword.jsp">
-   <input type="button" value="ResetPassword" />
-</a> <br><br> 
--->
+<br><br>
 If you have not already registered:
 
 <a href="Register.jsp?username=${username}" >

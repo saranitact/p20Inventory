@@ -3,7 +3,7 @@
 	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 	id="WebApp_ID" version="3.0">
-	<display-name>DevOps BookStore - Continuous Integration</display-name>
+	<display-name>DevOps Tools Inventory</display-name>
 	<welcome-file-list>
 
 		<welcome-file>index.jsp</welcome-file>
@@ -40,8 +40,27 @@
 		<servlet-name>ResetPassword</servlet-name>
 		<url-pattern>/ResetPassword</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>AddInventory</servlet-name>
+		<servlet-class>com.devops.Bookstore.AddInventory</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>AddInventory</servlet-name>
+		<url-pattern>/AddInventory</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>DisplayInventory</servlet-name>
+		<servlet-class>com.devops.Bookstore.DisplayInventory</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>DisplayInventory</servlet-name>
+		<url-pattern>/DisplayInventory</url-pattern>
+	</servlet-mapping>
 	<!--  Mongo DB -->
-	<display-name>MongoDBWebapp</display-name>
+	<display-name>InventoryWebapp</display-name>
 	
 	<context-param>
 		<param-name>MONGODB_HOST</param-name>

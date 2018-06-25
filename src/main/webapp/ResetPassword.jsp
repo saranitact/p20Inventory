@@ -4,10 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Devops Bookstore ResetPassword</title>
+<title>Reset Password</title>
 </head>
 <body>
-<h1>Welcome to Devops BookStore</h1>
+<table background="" bgcolor="yellowgreen" height="50" width="1200"> <tr><td>
+<h1>Reset Password</h1>
+</td></tr></table>
 <br><br>
 <form action="ResetPassword" method="post"> 
 <table>
@@ -40,6 +42,7 @@ Re-enter New Password:
 
 <tr>
 <td>
+<br><br>
 <input type="submit" value="Submit"> <br>
 </td>
 

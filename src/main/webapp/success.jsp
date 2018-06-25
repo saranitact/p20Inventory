@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>DevOps BookStore</title>
+<title>DevOps Inventory</title>
 </head>
 <body bgcolor="yellow">
  
@@ -14,20 +14,8 @@
 	<h2>
 	<!-- <br> Welcome ${dname} <br>--> 
 	
-	<br> Welcome to DevOps BookStore! <br> 
+	<br> Welcome to DevOps Inventory! <br> 
 	</h2>
  
-<!--  <img src="Images\Book1.jpg">
- <img src="Images\Book2.jpg">
- <img src="Images\Book3.jpg">  
- <img src="Images\Book4.jpg"><br>
- <img src="Images\Book5.jpg">
- <img src="Images\Book6.jpg">    
- <img src="Images\Book7.jpg">
- <img src="Images\Book8.jpg"><br>
- <img src="Images\Book9.jpg">
- <img src="Images\Book10.jpg">
- <img src="Images\Book11.jpg"> -->            
-            
 </body>
 </html>
