@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 
 public class UnitTest
 {
-	//Unit Test Cases
+	//Unit Test Cases for login screen
 
 	 @Test
 	 public void  testLoginSuccess(){
@@ -20,6 +20,8 @@ public class UnitTest
 		 //positive test case
 		 		 assertEquals(true, new ProcessLogin().Login("tinks_2000@yahoo.com",  "pass"));
 	 }
+	 
+	 
 	 @Test
 	   public void  testLoginFailure(){
 		 //negative test case
