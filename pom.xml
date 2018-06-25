@@ -2,11 +2,29 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.devops</groupId>
-  <artifactId>Bookstore</artifactId>
+  <artifactId>Inventory</artifactId>
   <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>DevOps BookStore</name>
+  <version>0.0.1-RELEASE</version>
+  <name>DevOps Tools Inventory</name>
   <url>http://maven.apache.org</url>
+  <!-- Below repo details have been added for sonatype nexus repo -->
+<distributionManagement>
+    <repository>
+        <id>releases</id>
+        <name>Releases</name>
+        <url>
+http://localhost:8082/nexus/content/repositories/releases</url>
+    </repository>
+ <snapshotRepository>
+        <id>snapshots</id>
+        <name>Snapshots</name>
+        <url>http://localhost:8082/nexus/content/repositories/snapshots</url>
+    </snapshotRepository>
+
+</distributionManagement>
+<!-- end nexus repo details -->
+
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -198,7 +216,7 @@
 					<configuration>
 						<url>http://localhost:7080/manager/text</url>
 						<server>tomcat</server>
-						<path>/Bookstore</path>
+						<path>/Inventory</path>
 						<update>true</update>
 					</configuration>
 				</plugin>
@@ -209,8 +227,45 @@
 					<version>2.7</version>
 
 				</plugin>
+				
+
 
 			</plugins>
 		</pluginManagement>
+		
+	<!--  
+	<repositories>
+    <repository>
+        <id>central</id>
+        <url>http://localhost:8081/artifactory/libs-release</url>
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+    </repository>
+    <repository>
+        <id>snapshots</id>
+        <url>http://localhost:8081/artifactory/libs-snapshot</url>
+        <releases>
+            <enabled>false</enabled>
+        </releases>
+    </repository>
+</repositories>
+<pluginRepositories>
+    <pluginRepository>
+        <id>central</id>
+        <url>http://localhost:8081/artifactory/plugins-release</url>
+        <snapshots>
+            <enabled>false</enabled>
+        </snapshots>
+    </pluginRepository>
+    <pluginRepository>
+        <id>snapshots</id>
+        <url>http://localhost:8081/artifactory/plugins-snapshot</url>
+        <releases>
+            <enabled>false</enabled>
+        </releases>
+    </pluginRepository>
+</pluginRepositories>
+-->
   </build>
 </project>
