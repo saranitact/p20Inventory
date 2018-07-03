@@ -41,7 +41,6 @@ public class UnitTest
 	   	assertEquals(false, new DisplayInventory().DisplayInv("BugZilla"));
 	    }
 	
-	//assertTrue(true);
 
 }
 
