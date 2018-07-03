@@ -4,6 +4,7 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 import com.devops.Inventory.ProcessLogin;
+import com.devops.Inventory.DisplayInventory;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -16,8 +17,7 @@ public class UnitTest
 
 	 @Test
 	 public void  testLoginSuccess(){
-    	//assertEquals(true, new ProcessLogin().Login("saran@a.com",  "saran@a.com"));
-		 //positive test case
+     //positive test case
 		 		 assertEquals(true, new ProcessLogin().Login("tinks_2000@yahoo.com",  "pass"));
 	 }
 	 
@@ -26,6 +26,19 @@ public class UnitTest
 	   public void  testLoginFailure(){
 		 //negative test case
 	   	assertEquals(false, new ProcessLogin().Login("saran@a.com",  "saran"));
+	    }
+	 
+	 @Test
+	 public void  testDisplayInvSuccess(){ 
+		 //positive test case
+		 		 assertEquals(true, new DisplayInventory().DisplayInv("Ansible"));
+	 }
+	 
+	 
+	 @Test
+	   public void  testDisplayInvFailure(){
+		 //negative test case
+	   	assertEquals(false, new DisplayInventory().DisplayInv("BugZilla"));
 	    }
 	
 	//assertTrue(true);
