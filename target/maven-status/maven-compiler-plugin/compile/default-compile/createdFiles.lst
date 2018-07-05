@@ -1,0 +1,6 @@
+com\devops\Inventory\mongoclass.class
+com\devops\Inventory\DisplayInventory.class
+com\devops\Inventory\ProcessLogin.class
+com\devops\Inventory\ResetPassword.class
+com\devops\Inventory\ProcessRegistration.class
+com\devops\Inventory\AddInventory.class
