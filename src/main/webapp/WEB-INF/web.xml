@@ -13,7 +13,7 @@
 
 	<servlet>
 		<servlet-name>ProcessLogin</servlet-name>
-		<servlet-class>com.devops.Bookstore.ProcessLogin</servlet-class>
+		<servlet-class>com.devops.Inventory.ProcessLogin</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -23,7 +23,7 @@
 	
 	<servlet>
 		<servlet-name>ProcessRegistration</servlet-name>
-		<servlet-class>com.devops.Bookstore.ProcessRegistration</servlet-class>
+		<servlet-class>com.devops.Inventory.ProcessRegistration</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -33,7 +33,7 @@
 	
 	<servlet>
 		<servlet-name>ResetPassword</servlet-name>
-		<servlet-class>com.devops.Bookstore.ResetPassword</servlet-class>
+		<servlet-class>com.devops.Inventory.ResetPassword</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -43,7 +43,7 @@
 	
 	<servlet>
 		<servlet-name>AddInventory</servlet-name>
-		<servlet-class>com.devops.Bookstore.AddInventory</servlet-class>
+		<servlet-class>com.devops.Inventory.AddInventory</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
@@ -52,7 +52,7 @@
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>DisplayInventory</servlet-name>
-		<servlet-class>com.devops.Bookstore.DisplayInventory</servlet-class>
+		<servlet-class>com.devops.Inventory.DisplayInventory</servlet-class>
 	</servlet>
 
 	<servlet-mapping>

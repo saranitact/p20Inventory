@@ -114,4 +114,31 @@ public class DisplayInventory
          rd.include(request, response);
     }
   }
+
+
+public boolean DisplayInv(String strname){
+  	Mongo mongo = null;
+    DB db = null;
+    DBCollection table = null;
+    //Connect
+    mongo = new Mongo("localhost", 27017);
+    
+    //set DB
+    db = mongo.getDB("BookstoreDB");
+    table = db.getCollection("Inventory");
+    
+    String name = strname;
+     
+    BasicDBObject query = new BasicDBObject();
+    query.put("name", name);
+    DBCursor cursor = table.find(query);
+    if (cursor.count() > 0) {
+    	return true;
+    }
+    else
+    {
+       	return false;
+    }
+}
+
 }
