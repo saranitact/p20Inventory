@@ -18,11 +18,15 @@ public class DisplayInventory
 {
   private static final long serialVersionUID = 1L;
   
-  public DisplayInventory() {}
+  public DisplayInventory() {
+	  //intentionally kept blank
+  }
   
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException
-  {}
+  {
+	  //intentionally kept blank
+  }
   
   protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException
@@ -44,8 +48,8 @@ public class DisplayInventory
     table = db.getCollection("Inventory");
     
     String name = request.getParameter("name");
-    String licensetype = request.getParameter("licensetype");
-    String purpose = request.getParameter("purpose");
+    //String licensetype = request.getParameter("licensetype");
+    //String purpose = request.getParameter("purpose");
     
    /* if (pwd1.equals(pwd2)) {
       responsePage = "success.jsp";

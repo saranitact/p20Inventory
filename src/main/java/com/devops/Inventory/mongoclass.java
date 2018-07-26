@@ -13,7 +13,10 @@ import com.mongodb.Mongo;
 //Setup connection with Mongodb, create BookstoreDB db and UserColl collection.
 public class mongoclass
 {
-  public mongoclass() {}
+  public mongoclass() 
+  {
+	  //intentionally left blank
+  }
   
   public static void main(String[] args) throws java.net.UnknownHostException
   {
@@ -46,13 +49,13 @@ public class mongoclass
     
     BasicDBObject document1 = new BasicDBObject();
     document1.put("name", "Anna");
-    document1.put("password", "pass");
+   // document1.put("password", "pass");
     document1.put("email", "a@b.com");
     document1.put("domain", "Continuous Integration");
     
     BasicDBObject document2 = new BasicDBObject();
     document2.put("name", "Kane");
-    document2.put("password", "pass");
+   // document2.put("password", "pass");
     document2.put("email", "a@b.com");
     document2.put("domain", "Continuous Integration");
     

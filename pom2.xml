@@ -4,9 +4,10 @@
   <groupId>com.devops</groupId>
   <artifactId>Inventory</artifactId>
   <packaging>war</packaging>
-  <version>0.0.1-RELEASE</version>
-  <name>DevOps Tools Inventory</name>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>DevOps Inventory</name>
   <url>http://maven.apache.org</url>
+
   <!-- Below repo details have been added for sonatype nexus repo -->
 <distributionManagement>
     <repository>
@@ -23,7 +24,6 @@ http://localhost:8082/nexus/content/repositories/releases</url>
 
 </distributionManagement>
 <!-- end nexus repo details -->
-
 
   <dependencies>
     <dependency>
@@ -70,7 +70,7 @@ http://localhost:8082/nexus/content/repositories/releases</url>
   <build>
      <finalName>MyWebIntegration</finalName>
     <plugins>
-			<!-- <plugin>
+			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
 				<version>1.9.1</version>
@@ -103,22 +103,22 @@ http://localhost:8082/nexus/content/repositories/releases</url>
 						</configuration>
 					</execution>
 				</executions>
-			</plugin> -->
-			 <plugin>
+			</plugin>
+			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.18.1</version>
 			 	<configuration>
-				<!--Below line was commented by me	
-				 <excludedGroups>com.devops.Inventory.IntegrationTest</excludedGroups>
-				Below testfailureignore and printsummary tags have been added by me 
+				<!-- Below line was commented by me		-->
+				<excludedGroups>com.devops.Inventory.IntegrationTest</excludedGroups>
+					<!-- Below testfailureignore and printsummary tags have been added by me 
         			<testFailureIgnore>true</testFailureIgnore>
         			<printSummary>true</printSummary>	-->
 				</configuration>
 			
 			</plugin>
- 
 
-<!-- 			<plugin>
+
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-failsafe-plugin</artifactId>
 				<version>2.19.1</version>
@@ -126,15 +126,15 @@ http://localhost:8082/nexus/content/repositories/releases</url>
 					<includes>
 						<include>**/*.java</include>
 					</includes>
-					below line has been commented by me 
-					 <groups>com.devops.Bookstore.IntegrationTest</groups>
+					<!-- below line has been commented by me  -->
+					 <groups>com.devops.Inventory.IntegrationTest</groups>
 				</configuration>
 				<executions>
 					<execution>
 						<goals>
 							<goal>integration-test</goal>
 							<goal>verify</goal>
-							tomcat will not stop if you do not specify verify
+							<!--tomcat will not stop if you do not specify verify -->
 						</goals>
 					</execution>
 				</executions>
@@ -169,7 +169,7 @@ http://localhost:8082/nexus/content/repositories/releases</url>
 					</execution>
 				</executions>
 			</plugin>
- */ -->
+ 
 
 		</plugins>
 		<pluginManagement>
@@ -225,46 +225,10 @@ http://localhost:8082/nexus/content/repositories/releases</url>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-deploy-plugin</artifactId>
 					<version>2.7</version>
-				</plugin>
-				
 
+				</plugin>
 
 			</plugins>
 		</pluginManagement>
-		
-	<!--  
-	<repositories>
-    <repository>
-        <id>central</id>
-        <url>http://localhost:8081/artifactory/libs-release</url>
-        <snapshots>
-            <enabled>false</enabled>
-        </snapshots>
-    </repository>
-    <repository>
-        <id>snapshots</id>
-        <url>http://localhost:8081/artifactory/libs-snapshot</url>
-        <releases>
-            <enabled>false</enabled>
-        </releases>
-    </repository>
-</repositories>
-<pluginRepositories>
-    <pluginRepository>
-        <id>central</id>
-        <url>http://localhost:8081/artifactory/plugins-release</url>
-        <snapshots>
-            <enabled>false</enabled>
-        </snapshots>
-    </pluginRepository>
-    <pluginRepository>
-        <id>snapshots</id>
-        <url>http://localhost:8081/artifactory/plugins-snapshot</url>
-        <releases>
-            <enabled>false</enabled>
-        </releases>
-    </pluginRepository>
-</pluginRepositories>
--->
   </build>
 </project>
