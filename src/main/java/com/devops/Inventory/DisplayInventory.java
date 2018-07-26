@@ -48,26 +48,12 @@ public class DisplayInventory
     table = db.getCollection("Inventory");
     
     String name = request.getParameter("name");
-    //String licensetype = request.getParameter("licensetype");
-    //String purpose = request.getParameter("purpose");
     
-   /* if (pwd1.equals(pwd2)) {
-      responsePage = "success.jsp";
-      */
-
       BasicDBObject query = new BasicDBObject();
       if (name != null) 
       {
        		query.put("name", name);
-    /* if (licensetype != null)  
-    		{
-    		query.put("licensetype", licensetype);
-    		}
-    if (purpose != null)  
-    		{
-    		query.put("purpose", purpose);
-    		}*/
-    
+        
       
      // DBCursor cursor = table.find(query);
        		BasicDBObject obj1= (BasicDBObject) table.findOne(query);
@@ -85,17 +71,7 @@ public class DisplayInventory
       
       else
       {
-          // BasicDBObject newDocument = new BasicDBObject();
-          /* newDocument.put("password", pwd1);
-           
-           BasicDBObject updateObj = new BasicDBObject();
-           updateObj.put("$set", newDocument);
-           
-           table.update(query, updateObj);*/
           
-          // while (cursor.hasNext()) {
-              // System.out.println(cursor.next());
-              // BasicDBObject obj = (BasicDBObject) cursor.next();
                request.setAttribute("dname", obj1.get("name").toString());
                request.setAttribute("dlicensetype",obj1.get("licensetype").toString());
                request.setAttribute("dpurpose",obj1.get("purpose").toString());
@@ -111,9 +87,7 @@ public class DisplayInventory
       }
     }
     else {
-     /* request.setAttribute("demail", email);
-      request.setAttribute("dmessage", "Enter a value to search");
-      rd.include(request, response);*/
+     
     	 request.setAttribute("dmessage", "Enter a value to search");
          rd.include(request, response);
     }
