@@ -6,7 +6,6 @@ import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.Mongo;
 import java.io.IOException;
-import java.io.PrintStream;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -22,12 +21,14 @@ public class DisplayInventory
 	  //intentionally kept blank
   }
   
+  @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException
   {
 	  //intentionally kept blank
   }
-  
+ 
+  @Override
   protected void doPost(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException
   {
@@ -58,7 +59,7 @@ public class DisplayInventory
      // DBCursor cursor = table.find(query);
        		BasicDBObject obj1= (BasicDBObject) table.findOne(query);
        		
-     // if (cursor.count() > 0)
+   
        		if (obj1.isEmpty())
       {
 
@@ -76,7 +77,7 @@ public class DisplayInventory
                request.setAttribute("dlicensetype",obj1.get("licensetype").toString());
                request.setAttribute("dpurpose",obj1.get("purpose").toString());
                request.setAttribute("dlicensecount", obj1.get("licensecount").toString());
-          //   }
+        
            responsePage = "DisplayInventory.jsp";
            request.setAttribute("dmessage", "Your search is successful.");
            request.setAttribute("dsearchresults", "Search results returned");
