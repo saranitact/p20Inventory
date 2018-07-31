@@ -105,8 +105,44 @@ public class AddInventory
       rd = request.getRequestDispatcher(responsePage);
     }
   }
+
+
+public boolean AddInv(String strname, String strlicensetype, String strpurpose, String strlicensecount){
+  	Mongo mongo = null;
+    DB db = null;
+    DBCollection table = null;
+    //Connect
+    mongo = new Mongo("localhost", 27017);
+    
+    //set DB
+    db = mongo.getDB("BookstoreDB");
+    table = db.getCollection("Inventory");
+    
+     double number= Math.random();
+    String name = strname + number;
+    BasicDBObject query = new BasicDBObject();
+    query.put("name", name);
+    DBCursor cursor = table.find(query);
+    if (cursor.count() > 0) {
+    	return false;
+    }
+    else
+    {
+    	 BasicDBObject newDocument = new BasicDBObject();
+         newDocument.put("name", name);
+         newDocument.put("licensetype", strlicensetype);
+         newDocument.put("purpose", strpurpose);
+         newDocument.put("licensecount", strlicensecount);
+         
+         table.insert(new DBObject[] { newDocument });
+    	
+    	return true;
+    }
+	}
 }
 
 /*public long multiply(int a,int b){
 	return a*b;
 }*/
+
+

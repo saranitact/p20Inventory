@@ -41,6 +41,10 @@ public class UnitTest
 	   	assertEquals(false, new DisplayInventory().DisplayInv("BugZilla"));
 	    }
 	
-
+	 @Test
+	 public void  testAddInvSuccess(){ 
+		 //positive test case
+		 		 assertEquals(true, new AddInventory().AddInv("Test1", "Open Source", "test", "0"));
+	 }
 }
 
