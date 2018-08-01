@@ -106,7 +106,7 @@ public class AddInventory
     }
   }
 
-
+//Add Inv
 public boolean AddInv(String strname, String strlicensetype, String strpurpose, String strlicensecount){
   	Mongo mongo = null;
     DB db = null;
