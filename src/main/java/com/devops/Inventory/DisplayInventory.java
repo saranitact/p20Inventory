@@ -11,6 +11,16 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+//import java.io.IOException;
+import java.util.Iterator;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+
 
 public class DisplayInventory
   extends HttpServlet
@@ -20,6 +30,10 @@ public class DisplayInventory
   public DisplayInventory() {
 	  //intentionally kept blank
   }
+  public String strRname= null;
+  public String strRltype= null;
+  public String strRpurpose= null;
+  public String strRlcount=  null;
   
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -38,29 +52,16 @@ public class DisplayInventory
     RequestDispatcher rd = request.getRequestDispatcher(responsePage);
     
     request.getRequestDispatcher("displayData.jsp");
-    
-
-    Mongo mongo = null;
-    DB db = null;
-    DBCollection table = null;
-    mongo = new Mongo("localhost", 27017);
-    
-    db = mongo.getDB("BookstoreDB");
-    table = db.getCollection("Inventory");
-    
     String name = request.getParameter("name");
+    Boolean flag = true;
     
-      BasicDBObject query = new BasicDBObject();
+ 
+
       if (name != null) 
       {
-       		query.put("name", name);
-        
-      
-     // DBCursor cursor = table.find(query);
-       		BasicDBObject obj1= (BasicDBObject) table.findOne(query);
-       		
+       		      		
    
-       		if (obj1.isEmpty())
+       		if (DisplayInv(name, flag)!=true)
       {
 
         
@@ -73,10 +74,10 @@ public class DisplayInventory
       else
       {
           
-               request.setAttribute("dname", obj1.get("name").toString());
-               request.setAttribute("dlicensetype",obj1.get("licensetype").toString());
-               request.setAttribute("dpurpose",obj1.get("purpose").toString());
-               request.setAttribute("dlicensecount", obj1.get("licensecount").toString());
+    	  request.setAttribute("dname", strRname);
+          request.setAttribute("dlicensetype",strRltype);
+          request.setAttribute("dpurpose",strRpurpose);
+          request.setAttribute("dlicensecount", strRlcount);   
         
            responsePage = "DisplayInventory.jsp";
            request.setAttribute("dmessage", "Your search is successful.");
@@ -95,12 +96,55 @@ public class DisplayInventory
   }
 
 
-public boolean DisplayInv(String strname){
-  	Mongo mongo = null;
-    DB db = null;
-    DBCollection table = null;
-    //Connect
-    mongo = new Mongo("localhost", 27017);
+public boolean DisplayInv(String strname, Boolean bflag){
+	 Mongo mongo = null;
+	    DB db = null;
+	    DBCollection table = null;
+
+	    String ip= null;
+	    
+	    try
+	    {
+	 	   JSONParser parser = new JSONParser();
+	       
+	 	   /*File currentDir = new File(".");
+	 	    File parentDir = currentDir.getParentFile();
+	 	    File newFile = new File(parentDir,"Inventory.json");*/
+	 	   
+	 	   File directory = new File("./");
+	 	   System.out.println("###########  Current Dir: ############" + directory.getAbsolutePath());
+	    
+	 	   File file = new File("conf//Inventory.json");
+	 	   String path = file.getAbsolutePath();
+	 	   System.out.println("############  Value of file path is:   ############" + path);	   
+	         Object obj = parser.parse(new FileReader(file));
+
+	         JSONObject jsonObject =  (JSONObject) obj;
+	         
+	         
+	         //parse json
+	        JSONArray mongoconn = (JSONArray) jsonObject.get("mongoconn");
+
+	         for (Object objmongoconn : mongoconn) {
+	             JSONObject jsonmongoconn = (JSONObject) objmongoconn;
+	             ip = (String) jsonmongoconn.get("ip");
+	           }
+
+	        //  ip = (String) jsonObject.get("ip");
+	    } catch (FileNotFoundException e) {
+	        e.printStackTrace();
+	        System.out.println("############  FileNotFoundException:   ############");
+	    } catch (IOException e) {
+	        e.printStackTrace();
+	        System.out.println("############  IOException:   ############");
+	    } catch (ParseException e) {
+	        e.printStackTrace();
+	        System.out.println("############  ParseException:   ############");
+	    }
+	      //end code for reading json file   
+	     mongo = new Mongo(ip, 27017);
+	     System.out.println("############  Value of ip is:   ############" + ip);
+	   // mongo = new Mongo("localhost", 27017);
     
     //set DB
     db = mongo.getDB("BookstoreDB");
@@ -109,9 +153,19 @@ public boolean DisplayInv(String strname){
     String name = strname;
      
     BasicDBObject query = new BasicDBObject();
+    
     query.put("name", name);
     DBCursor cursor = table.find(query);
+     
+    
     if (cursor.count() > 0) {
+    	if (bflag == true){
+    	BasicDBObject obj1= (BasicDBObject) table.findOne(query);
+    	  strRname= obj1.get("name").toString();
+    	  strRltype= obj1.get("licensetype").toString();
+    	  strRpurpose= obj1.get("purpose").toString();
+    	  strRlcount=  obj1.get("licensecount").toString();
+    	}
     	return true;
     }
     else

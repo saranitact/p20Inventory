@@ -12,6 +12,15 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+//import java.io.IOException;
+import java.util.Iterator;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 public class ResetPassword
   extends HttpServlet
@@ -38,7 +47,51 @@ public class ResetPassword
     Mongo mongo = null;
     DB db = null;
     DBCollection table = null;
-    mongo = new Mongo("localhost", 27017);
+
+    String ip= null;
+    
+    try
+    {
+ 	   JSONParser parser = new JSONParser();
+       
+ 	   /*File currentDir = new File(".");
+ 	    File parentDir = currentDir.getParentFile();
+ 	    File newFile = new File(parentDir,"Inventory.json");*/
+ 	   
+ 	   File directory = new File("./");
+ 	   System.out.println("###########  Current Dir: ############" + directory.getAbsolutePath());
+    
+ 	   File file = new File("conf//Inventory.json");
+ 	   String path = file.getAbsolutePath();
+ 	   System.out.println("############  Value of file path is:   ############" + path);	   
+         Object obj = parser.parse(new FileReader(file));
+
+         JSONObject jsonObject =  (JSONObject) obj;
+         
+         
+         //parse json
+        JSONArray mongoconn = (JSONArray) jsonObject.get("mongoconn");
+
+         for (Object objmongoconn : mongoconn) {
+             JSONObject jsonmongoconn = (JSONObject) objmongoconn;
+             ip = (String) jsonmongoconn.get("ip");
+           }
+
+        //  ip = (String) jsonObject.get("ip");
+    } catch (FileNotFoundException e) {
+        e.printStackTrace();
+        System.out.println("############  FileNotFoundException:   ############");
+    } catch (IOException e) {
+        e.printStackTrace();
+        System.out.println("############  IOException:   ############");
+    } catch (ParseException e) {
+        e.printStackTrace();
+        System.out.println("############  ParseException:   ############");
+    }
+      //end code for reading json file   
+     mongo = new Mongo(ip, 27017);
+     System.out.println("############  Value of ip is:   ############" + ip);
+   // mongo = new Mongo("localhost", 27017);
     
     db = mongo.getDB("BookstoreDB");
     table = db.getCollection("UserColl");

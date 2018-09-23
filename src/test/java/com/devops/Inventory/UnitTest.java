@@ -31,14 +31,14 @@ public class UnitTest
 	 @Test
 	 public void  testDisplayInvSuccess(){ 
 		 //positive test case
-		 		 assertEquals(true, new DisplayInventory().DisplayInv("Ansible"));
+		 		 assertEquals(true, new DisplayInventory().DisplayInv("Ansible", false));
 	 }
 	 
 	 
 	 @Test
 	   public void  testDisplayInvFailure(){
 		 //negative test case
-	   	assertEquals(false, new DisplayInventory().DisplayInv("BugZilla"));
+	   	assertEquals(false, new DisplayInventory().DisplayInv("BugZilla", false));
 	    }
 	
 	 @Test

@@ -1,0 +1,9 @@
+[  
+    {  
+        "ip":"localhost",
+        "port":"27017"
+
+        ],
+        "type":"mongoconn"
+    }
+]
