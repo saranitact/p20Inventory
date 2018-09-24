@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.devops.Inventory.UnitTest" time="2.77" tests="5" errors="0" skipped="0" failures="0">
+<testsuite name="com.devops.Inventory.UnitTest" time="6.19" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\bin"/>
@@ -64,9 +64,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testLoginSuccess" classname="com.devops.Inventory.UnitTest" time="2.603"/>
-  <testcase name="testDisplayInvSuccess" classname="com.devops.Inventory.UnitTest" time="0.04"/>
-  <testcase name="testLoginFailure" classname="com.devops.Inventory.UnitTest" time="0.027"/>
-  <testcase name="testDisplayInvFailure" classname="com.devops.Inventory.UnitTest" time="0.031"/>
-  <testcase name="testAddInvSuccess" classname="com.devops.Inventory.UnitTest" time="0.069"/>
+  <testcase name="testLoginSuccess" classname="com.devops.Inventory.UnitTest" time="5.713"/>
+  <testcase name="testDisplayInvSuccess" classname="com.devops.Inventory.UnitTest" time="0.113"/>
+  <testcase name="testLoginFailure" classname="com.devops.Inventory.UnitTest" time="0.121"/>
+  <testcase name="testDisplayInvFailure" classname="com.devops.Inventory.UnitTest" time="0.083"/>
+  <testcase name="testAddInvSuccess" classname="com.devops.Inventory.UnitTest" time="0.16"/>
 </testsuite>
