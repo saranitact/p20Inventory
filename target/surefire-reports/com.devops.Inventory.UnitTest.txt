@@ -1,17 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.devops.Inventory.UnitTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 72.674 sec <<< FAILURE! - in com.devops.Inventory.UnitTest
-testLoginSuccess(com.devops.Inventory.UnitTest)  Time elapsed: 54.402 sec  <<< ERROR!
-com.mongodb.MongoTimeoutException: Timed out after 30000 ms while waiting to connect. Client view of cluster state is {type=UNKNOWN, servers=[{address=localhost:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketReadTimeoutException: Timeout while receiving message}, caused by {java.net.SocketTimeoutException: Read timed out}}]
-	at com.mongodb.connection.BaseCluster.getDescription(BaseCluster.java:167)
-	at com.mongodb.Mongo.getConnectedClusterDescription(Mongo.java:881)
-	at com.mongodb.Mongo.createClientSession(Mongo.java:873)
-	at com.mongodb.Mongo$3.getClientSession(Mongo.java:862)
-	at com.mongodb.Mongo$3.execute(Mongo.java:819)
-	at com.mongodb.Mongo$3.execute(Mongo.java:809)
-	at com.mongodb.DBCollection.getCount(DBCollection.java:1002)
-	at com.mongodb.DBCursor.count(DBCursor.java:668)
-	at com.devops.Inventory.ProcessLogin.Login(ProcessLogin.java:135)
-	at com.devops.Inventory.UnitTest.testLoginSuccess(UnitTest.java:21)
-
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.923 sec - in com.devops.Inventory.UnitTest
