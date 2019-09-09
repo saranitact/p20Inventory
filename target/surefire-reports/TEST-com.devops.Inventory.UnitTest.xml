@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.devops.Inventory.UnitTest" time="2.473" tests="5" errors="0" skipped="0" failures="0">
+<testsuite name="com.devops.Inventory.UnitTest" time="5.738" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_131\jre\bin"/>
     <property name="java.vm.version" value="25.131-b11"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
-    <property name="maven.multiModuleProjectDirectory" value="E:\Jenkins\workspace\pInventory"/>
+    <property name="maven.multiModuleProjectDirectory" value="E:\Jenkins\workspace\pInventory@2"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
     <property name="path.separator" value=";"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="Service Pack 1"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="E:\Jenkins\workspace\pInventory"/>
+    <property name="user.dir" value="E:\Jenkins\workspace\pInventory@2"/>
     <property name="java.runtime.version" value="1.8.0_131-b11"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.8.0_131\jre\lib\endorsed"/>
@@ -64,9 +64,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="testLoginSuccess" classname="com.devops.Inventory.UnitTest" time="2.275"/>
-  <testcase name="testDisplayInvSuccess" classname="com.devops.Inventory.UnitTest" time="0.047"/>
-  <testcase name="testLoginFailure" classname="com.devops.Inventory.UnitTest" time="0.048"/>
-  <testcase name="testDisplayInvFailure" classname="com.devops.Inventory.UnitTest" time="0.046"/>
-  <testcase name="testAddInvSuccess" classname="com.devops.Inventory.UnitTest" time="0.057"/>
+  <testcase name="testLoginSuccess" classname="com.devops.Inventory.UnitTest" time="5.41"/>
+  <testcase name="testDisplayInvSuccess" classname="com.devops.Inventory.UnitTest" time="0.071"/>
+  <testcase name="testLoginFailure" classname="com.devops.Inventory.UnitTest" time="0.067"/>
+  <testcase name="testDisplayInvFailure" classname="com.devops.Inventory.UnitTest" time="0.054"/>
+  <testcase name="testAddInvSuccess" classname="com.devops.Inventory.UnitTest" time="0.136"/>
 </testsuite>
