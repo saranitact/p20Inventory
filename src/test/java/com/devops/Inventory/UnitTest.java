@@ -43,8 +43,10 @@ public class UnitTest
 	
 	 @Test
 	 public void  testAddInvSuccess(){ 
+		 double number= Math.random();
+		 String newname= "Testtool" + number;
 		 //positive test case
-		 		 assertEquals(true, new AddInventory().AddInv("Test1", "Open Source", "test", "0"));
+		 		 assertEquals(true, new AddInventory().AddInv(newname, "Open Source", "test", "0"));
 	 }
 }
 

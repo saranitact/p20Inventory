@@ -159,8 +159,9 @@ public boolean AddInv(String strname, String strlicensetype, String strpurpose, 
     db = mongo.getDB("BookstoreDB");
     table = db.getCollection("Inventory");
     
-     double number= Math.random();
-    String name = strname + number;
+    // double number= Math.random();
+   // String name = strname + number;
+    String name = strname;
     BasicDBObject query = new BasicDBObject();
     query.put("name", name);
     DBCursor cursor = table.find(query);
