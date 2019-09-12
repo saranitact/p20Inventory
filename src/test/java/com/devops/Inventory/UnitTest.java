@@ -48,5 +48,12 @@ public class UnitTest
 		 //positive test case
 		 		 assertEquals(true, new AddInventory().AddInv(newname, "Open Source", "test", "0"));
 	 }
+	 
+	 @Test
+	 public void  testAddInvFailure(){ 
+		 String newname= "Ansible";
+		 //negative test case
+		 		 assertEquals(false, new AddInventory().AddInv(newname, "Open Source", "deployment", "0"));
+	 }
 }
 
