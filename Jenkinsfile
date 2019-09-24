@@ -14,6 +14,8 @@ node(label: 'master') {
     stage('Package') {
         bat 'E:\\Users\\SARAN\\Downloads\\apache-maven-3.5.3-bin\\apache-maven-3.5.3\\bin\\mvn -U -DskipTests -f E:\\Users\\SARAN\\workspace\\Inventory\\pom.xml clean package'
         echo 'Package Completed'
+        input message: "Do you want to move forward with Integration testing?"
+        echo 'Approval has been done. Moving to the next stage.'
     }
    stage(' Preprod Deploy') {
         bat 'E:\\Users\\SARAN\\Downloads\\apache-maven-3.5.3-bin\\apache-maven-3.5.3\\bin\\mvn -U -DskipTests -f E:\\Users\\SARAN\\workspace\\Inventory\\pom.xml tomcat7:deploy -Dtomcat.username=tomcat1 -Dtomcat.password=s3cret'
