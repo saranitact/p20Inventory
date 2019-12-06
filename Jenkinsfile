@@ -43,7 +43,7 @@ node(label: 'master') {
     }
  
     stage('Package') {
-        bat 'E:\\Users\\SARAN\\Downloads\\apache-maven-3.5.3-bin\\apache-maven-3.5.3\\bin\\mvn -U -DskipTests -f E:\\Users\\SARAN\\workspace\\Inventory\\pom.xml clean package'
+        bat 'E:\\Users\\SARAN\\Downloads\\apache-maven-3.5.3-bin\\apache-maven-3.5.3\\bin\\mvn -U -DskipTests -f E:\\Users\\SARAN\\workspace\\Inventory\\pom.xml package'
         echo 'Package Completed'
     }
    stage(' Preprod Deploy') {
@@ -51,7 +51,7 @@ node(label: 'master') {
         echo 'Deploy Completed'
     }
      stage('Integration Testing') {
-        bat 'E:\\Users\\SARAN\\Downloads\\apache-maven-3.5.3-bin\\apache-maven-3.5.3\\bin\\mvn -f E:\\Users\\SARAN\\workspace\\Verify\\pom.xml clean integration-test'
+        bat 'E:\\Users\\SARAN\\Downloads\\apache-maven-3.5.3-bin\\apache-maven-3.5.3\\bin\\mvn -f E:\\Users\\SARAN\\workspace\\Verify\\pom.xml integration-test'
         echo 'Integration Test Completed'
      }
     
