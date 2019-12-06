@@ -1,10 +1,10 @@
 node(label: 'master') {
     try {
 
-   /* stage('Compile') {
+    stage('Compile') {
      bat 'E:\\Users\\SARAN\\Downloads\\apache-maven-3.5.3-bin\\apache-maven-3.5.3\\bin\\mvn -f E:\\Users\\SARAN\\workspace\\Inventory\\pom.xml clean compile'
      echo 'Compile Completed'
-    }*/
+    }
     
      stage('Compile and Unit Testing') {
         //bat 'xcopy C:\\Users\\SARAN\\Code\\mongoconndev\\Inventory.json  E:\\Users\\SARAN\\workspace\\Inventory\\target\\Inventory.json /s /y'
