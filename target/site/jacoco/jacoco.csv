@@ -1,0 +1,6 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+DevOps Tools Inventory,com.devops.Inventory,DisplayInventory,147,145,5,5,40,36,5,4,2,2
+DevOps Tools Inventory,com.devops.Inventory,ProcessRegistration,287,0,20,0,75,0,13,0,3,0
+DevOps Tools Inventory,com.devops.Inventory,ProcessLogin,72,136,2,4,24,32,3,4,2,2
+DevOps Tools Inventory,com.devops.Inventory,AddInventory,131,162,14,4,41,36,9,4,2,2
+DevOps Tools Inventory,com.devops.Inventory,ResetPassword,247,0,6,0,66,0,6,0,3,0
