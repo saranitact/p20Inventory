@@ -1,1 +1,2 @@
 This is the third sample file
+Changes made

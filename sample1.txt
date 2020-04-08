@@ -1,4 +1,0 @@
-This is the first sample.
-This file comes before others.
-Git is tracking my changes.
-Changes made.
