@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.devops.Inventory.UnitTest
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 11.296 sec - in com.devops.Inventory.UnitTest
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 27.333 sec - in com.devops.Inventory.UnitTest
