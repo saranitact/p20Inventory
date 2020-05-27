@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>DevOps Inventory Login</title>
+<title>DevOps Inventory Login version2.0</title>
 </head>
 <body>
 
