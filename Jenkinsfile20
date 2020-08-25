@@ -1,6 +1,6 @@
 node(label: 'master') {
     try {
-
+  
    /* stage('Compile') {
      bat 'E:\\Users\\SARAN\\Downloads\\apache-maven-3.5.3-bin\\apache-maven-3.5.3\\bin\\mvn -f E:\\Users\\SARAN\\workspace\\Inventory\\pom.xml clean compile'
      echo 'Compile Completed'
@@ -12,7 +12,7 @@ node(label: 'master') {
         echo 'Compile and Unit Test Completed'
     }
   
-    stage('Static Analysis') {
+ /*    stage('Static Analysis') {
    bat 'xcopy E:\\Users\\SARAN\\workspace\\Inventory %WORKSPACE%\\ /s /y'
              withSonarQubeEnv('SonarQube_Home') {
              //bat 'E:\\Users\\SARAN\\Downloads\\apache-maven-3.5.3-bin\\apache-maven-3.5.3\\bin\\mvn -f E:\\Users\\SARAN\\workspace\\Inventory\\pom.xml sonar:sonar \
@@ -46,7 +46,7 @@ node(label: 'master') {
         bat 'E:\\Users\\SARAN\\Downloads\\apache-maven-3.5.3-bin\\apache-maven-3.5.3\\bin\\mvn -U -DskipTests -f E:\\Users\\SARAN\\workspace\\Inventory\\pom.xml package'
         echo 'Package Completed'
     }
-  /* stage(' Preprod Deploy') {
+  stage(' Preprod Deploy') {
         bat 'E:\\Users\\SARAN\\Downloads\\apache-maven-3.5.3-bin\\apache-maven-3.5.3\\bin\\mvn -U -DskipTests -f E:\\Users\\SARAN\\workspace\\Inventory\\pom.xml tomcat7:deploy -Dtomcat.username=tomcat1 -Dtomcat.password=s3cret'
         echo 'Deploy Completed'
     }
