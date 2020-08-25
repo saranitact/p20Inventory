@@ -1,5 +1,4 @@
 node(label: 'master') {
-    agent: any
     try {
     
    /* stage('Compile') {
