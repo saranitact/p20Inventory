@@ -12,11 +12,11 @@ pipeline {
         PATH = "/opt/maven3/bin:$PATH"
     }*/
     stages {
-        stage("Git Checkout"){
-        /*    steps{
+       /*  stage("Git Checkout"){
+           steps{
                 git credentialsId: 'github', url: 'https://github.com/saranitact/p20Inventory'
-            }*/
-        }
+            }
+        }*/
         stage("Maven Build"){
             steps{
                 bat 'echo "M2_HOME: ${M2_HOME}"'
