@@ -16,6 +16,6 @@ pipeline[
                 echo 'Compile and Unit Test Completed'
             }
         }
+    }
 
-
-}
+]
