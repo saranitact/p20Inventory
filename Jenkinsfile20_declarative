@@ -1,1 +1,21 @@
 
+pipeline[
+  agent any
+/*  environment{
+        PATH = "/opt/maven3/bin:$PATH"
+    }*/
+    stages{
+        stage("Git Checkout"){
+            steps{
+                git credentialsId: 'github', url: 'https://github.com/saranitact/p20Inventory'
+            }
+        }
+        stage("Maven Build"){
+            steps{
+                bat 'mvn clean test'
+                echo 'Compile and Unit Test Completed'
+            }
+        }
+
+
+}
