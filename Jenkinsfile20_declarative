@@ -20,7 +20,7 @@ pipeline {
         stage("Maven Build"){
             steps{
                 bat 'echo "M2_HOME: %MAVEN_HOME$"'
-                 bat 'E:\\Users\\SARAN\\Downloads\\apache-maven-3.5.3-bin\\apache-maven-3.5.3\\bin\\mvn -f E:\\Users\\SARAN\\workspace\\p20Inventory\\pom.xml clean test'
+                 bat 'mvn clean test'
                 echo 'Compile and Unit Test Completed'
             }
         }
