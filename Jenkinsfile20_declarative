@@ -6,7 +6,7 @@ pipeline {
      }
     }
     tools { 
-        maven 'Maven 3.5.3' 
+        MAVEN_HOME 'Maven 3.5.3' 
     }
 /*  environment{
         PATH = "/opt/maven3/bin:$PATH"
