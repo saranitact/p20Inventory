@@ -13,9 +13,9 @@ pipeline {
     }*/
     stages {
         stage("Git Checkout"){
-            steps{
+        /*    steps{
                 git credentialsId: 'github', url: 'https://github.com/saranitact/p20Inventory'
-            }
+            }*/
         }
         stage("Maven Build"){
             steps{
