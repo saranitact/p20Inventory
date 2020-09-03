@@ -10,7 +10,7 @@ pipeline {
     }*/
  environment{
         JENKINS_HOME= "E:\\Users\\SARAN\\workspace\\p20Inventory"
-        M2_HOME=%Maven_HOME%
+       // M2_HOME=%Maven_HOME%
     }
     stages {
        /*  stage("Git Checkout"){
