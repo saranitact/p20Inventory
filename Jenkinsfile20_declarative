@@ -7,10 +7,10 @@ pipeline {
     }
 /*     tools { 
         maven MAVEN_HOME 
-    }
- environment{
-        PATH = "/opt/maven3/bin:$PATH"
     }*/
+ environment{
+        JENKINS_HOME= "E:\\Users\\SARAN\\workspace\\p20Inventory"
+    }
     stages {
        /*  stage("Git Checkout"){
            steps{
