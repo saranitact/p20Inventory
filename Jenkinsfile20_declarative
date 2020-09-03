@@ -19,7 +19,7 @@ pipeline {
         }*/
         stage("Maven Build"){
             steps{
-                bat 'echo "M2_HOME: %MAVEN_HOME$"'
+                bat 'echo "M2_HOME: %Maven_HOME%"'
                  bat 'mvn clean test'
                 echo 'Compile and Unit Test Completed'
             }
