@@ -10,6 +10,7 @@ pipeline {
     }*/
  environment{
         JENKINS_HOME= "E:\\Users\\SARAN\\workspace\\p20Inventory"
+        M2_HOME=%Maven_HOME%
     }
     stages {
        /*  stage("Git Checkout"){
@@ -20,6 +21,7 @@ pipeline {
         stage("Maven Build"){
             steps{
                 bat 'echo "M2_HOME: %Maven_HOME%"'
+                 bat 'echo "JENKINS_HOME: %JENKINS_HOME%"'
                  bat 'mvn clean test'
                 echo 'Compile and Unit Test Completed'
             }
