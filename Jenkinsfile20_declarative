@@ -28,7 +28,8 @@ pipeline {
         }
          stage('Static Analysis'){
             steps{
-                    withSonarQubeEnv('SonarQube_Home') {
+                   bat 'xcopy E:\\Users\\SARAN\\workspace\\Inventory %WORKSPACE%\\ /s /y'
+                   withSonarQubeEnv('SonarQube_Home') {
                     bat 'mvn sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsonar.login=94a5afcdac3bcf731bfa5467a0169fe806b31601' 
                     echo 'Static Analysis Completed'
                  }
