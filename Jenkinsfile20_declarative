@@ -17,7 +17,7 @@ pipeline {
                 git credentialsId: 'github', url: 'https://github.com/saranitact/p20Inventory'
             }
         }*/
-        stage("Maven Build"){
+        stage("Maven Build via Webhook"){
             steps{
                 bat 'echo "M2_HOME: %Maven_HOME%"'
                  bat 'echo "JENKINS_HOME: %JENKINS_HOME%"'
