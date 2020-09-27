@@ -6,7 +6,7 @@ node(label: 'master') {
      echo 'Compile Completed'
     }*/
     
-     stage('Compile and Unit Testing - with webhook again') {
+     stage('Compile and Unit Testing - with webhook yet again') {
           echo 'Compile started'
         //bat 'xcopy C:\\Users\\SARAN\\Code\\mongoconndev\\Inventory.json  E:\\Users\\SARAN\\workspace\\Inventory\\target\\Inventory.json /s /y'
         bat 'E:\\Users\\SARAN\\Downloads\\apache-maven-3.5.3-bin\\apache-maven-3.5.3\\bin\\mvn -f E:\\Users\\SARAN\\workspace\\Inventory\\pom.xml clean test'
