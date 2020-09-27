@@ -12,12 +12,12 @@ pipeline {
                 git credentialsId: 'github', url: 'https://github.com/saranitact/p20Inventory'
             }
         }
-        stage('gitcheckout from code snippet')(
+        stage('gitcheckout from code snippet'){
             steps{
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], 
                 submoduleCfg: [], userRemoteConfigs: [[credentialsId: '8a226c3a-9b44-4174-b38b-dff5aa1cd0d4', url: 'https://github.com/saranitact/p20Inventory/']]])
             }
-        )
+        }
     }
     
 }
