@@ -10,7 +10,7 @@ pipeline {
         }
         stage("Git Checkout"){
            steps{
-                git branches: 'master', url: 'https://github.com/saranitact/p20Inventory'
+                git branch: 'master', url: 'https://github.com/saranitact/p20Inventory'
             }
         }
         stage('gitcheckout from code snippet'){
