@@ -2,7 +2,7 @@ pipeline {
     agent { label 'master' }
 
     stages {
-        stage('Hello') {
+        stage('Hello with webhook') {
             steps {
                 echo 'Hello World'
             }
@@ -12,9 +12,8 @@ pipeline {
                 git credentialsId: 'github', url: 'https://github.com/saranitact/p20Inventory'
             }
         }
-        stage('gitcheckout from code snippet to test Webhook via plugin'){
+        stage('gitcheckout from code snippet'){
             steps{
-                echo 'Hello World checkout from VS Code yet again'
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], 
                 submoduleCfg: [], userRemoteConfigs: [[credentialsId: '8a226c3a-9b44-4174-b38b-dff5aa1cd0d4', url: 'https://github.com/saranitact/p20Inventory/']]])
             }
