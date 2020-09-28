@@ -1,15 +1,16 @@
+properties([pipelineTriggers([githubPush()])])
 pipeline {
     agent { label 'master' }
 
     stages {
-        stage('Hello with ithub webhook for jenkins') {
+        stage('Hello with Github webhook for jenkins') {
             steps {
                 echo 'Hello World'
             }
         }
         stage("Git Checkout"){
            steps{
-                git credentialsId: 'github', url: 'https://github.com/saranitact/p20Inventory'
+                git branches: 'master', url: 'https://github.com/saranitact/p20Inventory'
             }
         }
         stage('gitcheckout from code snippet'){
