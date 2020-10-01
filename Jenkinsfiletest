@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Hello with Github webhook for jenkins') {
             steps {
-                echo 'Hello World'
+                echo 'Hello World update'
             }
         }
         stage("Git CheckoutInventory"){
