@@ -8,9 +8,10 @@ pipeline {
                 echo 'Hello World'
             }
         }
-        stage("Git Checkout"){
+        stage("Git CheckoutInventory"){
            steps{
-                git branch: 'master', url: 'https://github.com/saranitact/p20Inventory'
+                git branch: 'master', url: 'https://github.com/saranitact/Inventory'
+                  echo 'Hello from Inventory checkout step'
             }
         }
         stage('gitcheckout from code snippet'){
