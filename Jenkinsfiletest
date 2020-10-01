@@ -3,7 +3,7 @@ pipeline {
     agent { label 'master' }
 
     stages {
-        stage('Hello with Github webhook') {
+        stage('Hello with Github webhook test') {
             steps {
                 echo 'Hello World updated'
             }
