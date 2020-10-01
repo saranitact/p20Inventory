@@ -14,7 +14,8 @@ pipeline {
     stages {
         stage("Git Checkout from Jenkinsfile declarative"){
            steps{
-                git credentialsId: 'github', url: 'https://github.com/saranitact/p20Inventory'
+                git credentialsId: 'github', url: 'https://github.com/saranitact/Inventory'
+                 echo 'Git Checkout from Jenkinsfile declarative Completed'
             }
         }
       /*   stage("Maven Build to test Webhook via plugin"){
