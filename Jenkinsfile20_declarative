@@ -13,12 +13,12 @@ pipeline {
        // M2_HOME=%Maven_HOME%
     }
     stages {
-       /*  stage("Git Checkout"){
+       stage("Git Checkout from feature1"){
            steps{
                 git credentialsId: 'github', url: 'https://github.com/saranitact/p20Inventory'
             }
-        }*/
-        stage("Maven Build"){
+        }
+       /*   stage("Maven Build"){
             steps{
                 bat 'echo "M2_HOME: %Maven_HOME%"'
                  bat 'echo "JENKINS_HOME: %JENKINS_HOME%"'
@@ -47,6 +47,6 @@ pipeline {
                 }
               echo 'Quality Gate Passed'
            }
-        }    
+        }  */  
       } //stages
   } //pipeline
