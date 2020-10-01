@@ -13,7 +13,7 @@ pipeline {
        // M2_HOME=%Maven_HOME%
     }
     stages {
-       stage("Git Checkout from Inventory from feature1"){
+       stage("Git Checkout from Inventory from feature1 branch"){
            steps{
                 git credentialsId: 'github', url: 'https://github.com/saranitact/Inventory'
             }
