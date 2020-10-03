@@ -1,0 +1,20 @@
+node(label: 'master') {
+    try {
+    
+    
+     stage('Compile and Unit Testing - with webhook') {
+          echo 'Compile started'
+        //bat 'xcopy C:\\Users\\SARAN\\Code\\mongoconndev\\Inventory.json  E:\\Users\\SARAN\\workspace\\Inventory\\target\\Inventory.json /s /y'
+        bat 'mvn clean test'
+        echo 'Compile and Unit Test Completed'
+    }
+  
+
+    
+    } catch(err) 
+    {
+        currentBuild.result = "FAILURE"
+       step([$class: 'Mailer', notifyUnstableEveryBuild: true, recipients: 'saranitact@gmail.com', sendToIndividuals: true])
+        throw err
+     }
+    } 
