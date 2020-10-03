@@ -8,12 +8,12 @@ pipeline {
                 echo 'Hello World updated'
             }
         }
-        stage("Git CheckoutInventory"){
+        /*stage("Git CheckoutInventory"){
            steps{
                 git branch: 'master', url: 'https://github.com/saranitact/Inventory'
                   echo 'Hello from Inventory checkout step'
             }
-        }
+        }*/
        
     }
     
