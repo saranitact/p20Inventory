@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Hello world') {
             steps {
-                echo 'Hello World5'
+                echo 'Hello World6'
             }
         }
         /*stage("Git CheckoutInventory"){
