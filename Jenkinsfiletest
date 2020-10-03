@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Hello with Github webhook test') {
             steps {
-                echo 'Hello World updated'
+                echo 'Hello World updated again'
             }
         }
         /*stage("Git CheckoutInventory"){
