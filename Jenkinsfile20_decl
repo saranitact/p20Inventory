@@ -13,9 +13,10 @@ pipeline {
        // M2_HOME=%Maven_HOME%
     }
     stages {
-       stage("Git Checkout for Inventory from feature1 branch"){
+       stage("Git Checkout from feature1 branch"){
            steps{
-                git credentialsId: 'github', url: 'https://github.com/saranitact/Inventory'
+                //git credentialsId: 'github', url: 'https://github.com/saranitact/p20Inventory'
+                 echo 'Checkout step Completed but code was not actually checked out'
             }
         }
        /*   stage("Maven Build"){
