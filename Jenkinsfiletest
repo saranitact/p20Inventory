@@ -2,7 +2,7 @@ pipeline {
     agent { label 'master' }
 
     stages {
-        stage('Hello world') {
+        stage('Hello world from jenkinsfiletest') {
             steps {
                 echo 'Hello World3'
             }
