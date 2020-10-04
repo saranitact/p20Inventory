@@ -2,9 +2,9 @@ pipeline {
     agent { label 'master' }
 
     stages {
-        stage('Hello world1 from Jenkinsfiletest') {
+        stage('Hello world from Jenkinsfiletest') {
             steps {
-                echo 'Hello World3'
+                echo 'Hello World4'
             }
         }
         /*stage("Git CheckoutInventory"){
