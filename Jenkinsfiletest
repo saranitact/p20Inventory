@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Hello world from Jenkinsfiletest') {
             steps {
-                echo 'Hello World6'
+                echo 'Hello World7'
             }
         }
         /*stage("Git CheckoutInventory"){
