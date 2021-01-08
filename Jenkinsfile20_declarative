@@ -18,7 +18,7 @@ pipeline {
                  echo 'Git Checkout from Jenkinsfile declarative Completed'
             }
         }
-      /*   stage("Maven Build to test Webhook via plugin"){
+         stage("Maven Build to test Webhook via plugin"){
             steps{
                 bat 'echo "M2_HOME: %Maven_HOME%"'
                  bat 'echo "JENKINS_HOME: %JENKINS_HOME%"'
@@ -37,7 +37,7 @@ pipeline {
          }
           stage("Quality Gate"){
              steps {
-                timeout(time: 1, unit: 'HOURS') {
+                timeout(time: 10, unit: 'MINUTES') {
                     script  {
                         def qg = waitForQualityGate()
                         if (qg.status != 'OK') {
@@ -47,6 +47,6 @@ pipeline {
                 }
               echo 'Quality Gate Passed'
            }
-        }  */  
+        }    
       } //stages
   } //pipeline
