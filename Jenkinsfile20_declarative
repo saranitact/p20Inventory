@@ -26,7 +26,7 @@ pipeline {
                 echo 'Compile and Unit Test Completed'
             }
         }
-         stage('Static Analysis'){
+        /* stage('Static Analysis'){
             steps{
                    bat 'xcopy E:\\Users\\SARAN\\workspace\\p20Inventory %WORKSPACE%\\ /s /y'
                    withSonarQubeEnv('SonarQube_Home') {
@@ -47,6 +47,18 @@ pipeline {
                 }
               echo 'Quality Gate Passed'
            }
-        }    
+        } */
+        stage('Package') {
+          steps{
+                bat 'mvn -U -DskipTests package'
+                echo 'Package Completed'
+          }
+       }
+       stage('Deploy') {
+         steps{
+                bat 'mvn -U -DskipTests tomcat7:deploy -Dtomcat.username=<uname> -Dtomcat.password=<pword>'
+                echo 'Deploy Completed'
+          }
+       ) 
       } //stages
   } //pipeline
